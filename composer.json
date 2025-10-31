@@ -1,0 +1,33 @@
+{
+  "name": "tourze/phpstan-symfony-web-test",
+  "description": "",
+  "type": "library",
+  "homepage": "https://github.com/tourze/phpstan-symfony-web-test",
+  "license": "MIT",
+  "require": {
+    "composer-runtime-api": "^2.0",
+    "symfony/dependency-injection": "^7.3",
+    "symfony/framework-bundle": "^7.3",
+    "symfony/yaml": "^7.3"
+  },
+  "require-dev": {
+    "easycorp/easyadmin-bundle": "^4",
+    "phpat/phpat": "^0.11.9",
+    "phpstan/phpstan": "^2.1",
+    "phpunit/phpunit": "^11.5",
+    "tourze/phpunit-symfony-web-test": "0.0.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Tourze\\PHPStanSymfonyWebTest\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tourze\\PHPStanSymfonyWebTest\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "release-version": "0.1.*"
+  }
+}

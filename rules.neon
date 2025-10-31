@@ -1,0 +1,24 @@
+services:
+    -
+        class: Tourze\PHPStanSymfonyWebTest\Rules\ControllerTestMustExtendAbstractWebTestCaseRule
+        tags:
+            - phpstan.rules.rule
+
+    # WEB应用测试
+    -
+        class: Tourze\PHPStanSymfonyWebTest\Rules\RequireRunInSeparateProcessRule
+        tags:
+            - phpstan.rules.rule
+
+rules:
+    - Tourze\PHPStanSymfonyWebTest\Rules\ReturnValue\ControllerResponseTypeRule
+
+    - Tourze\PHPStanSymfonyWebTest\Rules\EasyAdmin\RequireAdminCrudAttributeRule
+    - Tourze\PHPStanSymfonyWebTest\Rules\EasyAdmin\AdminActionRouteParametersRule
+    - Tourze\PHPStanSymfonyWebTest\Rules\EasyAdmin\EasyAdminFilterTestCoverageRule
+    - Tourze\PHPStanSymfonyWebTest\Rules\EasyAdmin\EasyAdminCustomActionTestCoverageRule
+    - Tourze\PHPStanSymfonyWebTest\Rules\EasyAdmin\EasyAdminAddFlashTypeRule
+    - Tourze\PHPStanSymfonyWebTest\Rules\EasyAdmin\ForbidAdminActionWithRouteTogetherRule
+    - Tourze\PHPStanSymfonyWebTest\Rules\EasyAdmin\EasyAdminRequiredFieldValidationTestRule
+    - Tourze\PHPStanSymfonyWebTest\Rules\EasyAdmin\EasyAdminBatchActionTestRule
+    - Tourze\PHPStanSymfonyWebTest\Rules\EasyAdmin\MenuProviderTestMustInheritAbstractEasyAdminMenuTestCaseRule

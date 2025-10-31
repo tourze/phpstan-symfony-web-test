@@ -1,1 +1,0 @@
-# phpstan-symfony-web-test
